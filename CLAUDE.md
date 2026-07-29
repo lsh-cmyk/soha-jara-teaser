@@ -15,6 +15,8 @@
   - 프로필 사진: base64 임베드
   - 오디오: base64 임베드 (2:06). ID3 태그는 제거 후 재작성됨
   - 가사: Part.1 / Part.2 두 박스, 줄 단위 자동 하이라이트 (총 26줄)
+    - 하이라이트는 JS의 `LYRIC_TIMES` 배열(26개, 초 단위)로 동작. 곡을 들으며 직접 찍은 실측값이라 균등 분배로 되돌리지 말 것
+    - 음원이나 가사가 바뀌면 `sync.html`(gitignore됨)로 다시 찍어야 함
   - 색상 테마: `--cream: #FAF6F0`, `--brown: #3A2E20`, `--amber: #C4956A`, `--sage: #7A9E7E`, `--petal: #E8B4B8`
   - 폰트: Cormorant Garamond + Noto Serif KR + Nanum Pen Script(손글씨)
 - `cover.jpg` — og:image 전용 (1200x1200, 280KB). data URI는 SNS 크롤러가 못 읽어서 별도 파일 필요
